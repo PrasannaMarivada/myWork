@@ -7,8 +7,8 @@ body{
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
-    background: linear-gradient(-45deg, rgb(131, 219, 131),rgb(211, 146, 146), rgb(132, 132, 218), rgb(131, 219, 131));
-    /* background: radial-gradient(ellipse, rgb(192, 117, 117), rgb(81, 81, 216)); */
+    /* background: linear-gradient(-45deg,rgba(211, 146, 146,0.5) 0%, rgba(132, 132, 218,0.5) 50%); */
+    background: radial-gradient(circle,rgba(211, 146, 146,0.5) 0%, rgba(132, 132, 218,0.5) 50%);
 
 }
 
@@ -23,9 +23,24 @@ body{
 
 
 .card{
-    display: inline-block;
     width: 220px;
     height: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card h2{
+    font-size: 23px;
+    font-weight: normal;
+    color: rgb(0, 47, 255);
+    margin: 0;
+    padding-top: 3px;
+}
+.card .content{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     border: 1px solid#aaa;
     text-decoration: none;
     color: black;
@@ -38,14 +53,7 @@ body{
     transform: translate(-50%, -50%);
     box-shadow: 0 5px 8px rgba(77, 77, 146,0.75), inset 0px 0 8px rgb(143, 143, 226);
     transition: 250ms box-shadow ease-in-out;
-}
-.card h2{
-    font-size: 23px;
-    font-weight: normal;
-    color: rgb(0, 47, 255);
-    /* text-shadow: 0 0 10px rgb(187, 134, 236); */
-    margin: 0;
-    padding-top: 3px;
+    backdrop-filter: blur(20px);
 }
 .box{
     margin-left: 45px;
@@ -79,11 +87,11 @@ body{
     margin: 0;
     padding-bottom: 5px;
 }
-.card:hover{
+.card:hover .content{
     box-shadow: 0 0 30px rgb(119, 175, 238);
     margin-top: -5px;
     margin-left: -5px;
-    background: rgb(219, 198, 198);
+    background: rgb(226, 216, 216);
     transition: all 250ms ease-in-out;
 }
 .card:hover .card-title{
@@ -100,8 +108,8 @@ body{
    position: absolute;  
    width: 100%;  
    height: 50%;  
-   background: rgba(148,187,233,1);  
-   z-index: -10;  
+   background: rgb(69, 122, 182);  
+   z-index: -20;  
    transition: all .4s;  
    opacity: 0;
  }  
@@ -113,7 +121,7 @@ body{
   .card::after{  
     bottom: 0;  
     left: 0;  
-    background: rgba(238,174,202,1);  
+    background: rgb(177, 86, 125);  
   } 
   .card:hover::before{  
     width: 50px;  
@@ -123,9 +131,9 @@ body{
     opacity: 0.5; 
   }  
   .card:hover::after{  
-    width: 80px;  
-    height: 80px;  
-    transform: translate(-40px, 25px);  
+    width: 100px;  
+    height: 100px;  
+    transform: translate(-40px, 20px);  
     border-radius: 50%;  
     opacity: 0.5;
   }  
