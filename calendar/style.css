@@ -1,0 +1,76 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: #f5f1e9;
+    height: 100%;
+}
+#calendar{
+margin-left: auto;
+margin-right: auto;
+width: 320px;
+font-family: 'Lato', sans-serif;
+border: 1px solid red;
+height: 100%;
+}
+#calendar-weekdays div{
+display: inline-block;
+border: 1px solid blue;
+vertical-align: top;
+}
+#calendar-content, #calendar-weekdays,#calendar-header{
+    position: relative;
+    width: 320px;
+    overflow: hidden;
+    float: left;
+    z-index: 10;    
+}
+#calendar-weekdays div, #calendar-content div{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #ffffff;
+    color: #787878;
+}
+#calendar-content{
+    border-radius: 0 0 12px 12px;
+}
+#calendar-content div{
+    float: left;
+}
+#calendar-content div:hover{
+    background-color: #f8f8f8;
+}
+#calendar-content div.blank{
+    background-color: #e8e8e8;
+}
+#calendar-header, #calendar-content div.today{
+    zoom: 1;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+#calendar-content div.today{
+    color: #ffffff;
+}
+#calendar-header{
+    width: 100%;
+    height: 37px;
+    text-align: center;
+    background-color: #ff6860;
+    padding:18px 0;
+    border-radius: 12px 12px 0 0;
+}
+#calendar-header h1{
+    font-size: 1.5em;
+    color: #ffffff;
+    float: left;
+    width: 70%;
+}
+
+i[class^=icon-chevron]{
+    columns: #ffffff;
+    float: left;
+    width: 15%;
+    border-radius: 50%;
+}
